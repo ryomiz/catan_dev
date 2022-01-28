@@ -5,6 +5,7 @@ import {GraphQLModule} from "@nestjs/graphql";
 import { join } from 'path'
 import { TitlesModule } from './titles/titles.module';
 import { UsersModule } from './users/users.module';
+import { GamesModule } from './games/games.module';
 
 @Module({
   imports: [
@@ -13,7 +14,8 @@ import { UsersModule } from './users/users.module';
       sortSchema: true
     }),
     TitlesModule,
-    UsersModule
+    UsersModule,
+    GamesModule
   ],
   controllers: [AppController],
   providers: [AppService],
