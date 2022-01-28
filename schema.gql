@@ -1,0 +1,27 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Game {
+  id: ID!
+  name: String!
+  titleId: Float!
+  userIds: [Float!]!
+}
+
+type Query {
+  games: [Game!]!
+  titles: [Title!]!
+  users: [User!]!
+}
+
+type Title {
+  id: ID!
+  title: String!
+}
+
+type User {
+  id: ID!
+  name: String!
+  role: String!
+}

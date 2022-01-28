@@ -10,8 +10,8 @@ import { GamesModule } from './games/games.module';
 @Module({
   imports: [
     GraphQLModule.forRoot({
-      autoSchemaFile: true,
-      sortSchema: true
+      autoSchemaFile: join(process.cwd(), '../../schema.gql'),
+      sortSchema: true,
     }),
     TitlesModule,
     UsersModule,
