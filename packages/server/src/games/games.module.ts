@@ -3,6 +3,6 @@ import { GamesResolver } from './games.resolver';
 import { GamesService } from './games.service';
 
 @Module({
-  providers: [GamesResolver, GamesService]
+  providers: [GamesResolver, GamesService],
 })
 export class GamesModule {}

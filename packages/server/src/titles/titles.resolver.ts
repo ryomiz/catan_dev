@@ -1,13 +1,13 @@
-import {Query, Resolver} from '@nestjs/graphql';
-import {Title} from "./title";
-import {TitlesService} from "./titles.service";
+import { Query, Resolver } from '@nestjs/graphql';
+import { Title } from './title';
+import { TitlesService } from './titles.service';
 
-@Resolver((of => Title))
+@Resolver((of) => Title)
 export class TitlesResolver {
   constructor(private readonly titlesService: TitlesService) {}
 
-  @Query((returns => [Title]))
+  @Query((returns) => [Title])
   titles() {
-    return this.titlesService.findAll()
+    return this.titlesService.findAll();
   }
 }
