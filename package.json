@@ -8,7 +8,7 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "start:front": "yarn workspace frontend dev",
-    "start:server": "yarn workspace server start:dev"
+    "frontend": "yarn workspace frontend dev",
+    "server": "yarn workspace server start:dev"
   }
 }
