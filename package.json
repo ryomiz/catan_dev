@@ -6,9 +6,17 @@
   "author": "Ryosuke Mizuno <ryo.mizuno502@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": ["packages/*"],
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "frontend": "yarn workspace frontend dev",
-    "server": "yarn workspace server start:dev"
+    "server": "yarn workspace server start:dev",
+    "prettier": "prettier --write './packages/**/*.{ts,tsx}'"
+  },
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.5.1"
   }
 }
