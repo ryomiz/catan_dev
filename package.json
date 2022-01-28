@@ -6,9 +6,7 @@
   "author": "Ryosuke Mizuno <ryo.mizuno502@gmail.com>",
   "license": "MIT",
   "private": true,
-  "workspaces": {
-    "packages": ["app/front", "app/server"]
-  },
+  "workspaces": ["packages/*"],
   "scripts": {
     "start:front": "yarn workspace front dev",
     "start:server": "yarn workspace server start:dev"
