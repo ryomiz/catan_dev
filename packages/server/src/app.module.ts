@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import {GraphQLModule} from "@nestjs/graphql";
 import { join } from 'path'
 import { TitlesModule } from './titles/titles.module';
+import { UsersModule } from './users/users.module';
 
 @Module({
   imports: [
@@ -11,7 +12,8 @@ import { TitlesModule } from './titles/titles.module';
       autoSchemaFile: true,
       sortSchema: true
     }),
-    TitlesModule
+    TitlesModule,
+    UsersModule
   ],
   controllers: [AppController],
   providers: [AppService],
