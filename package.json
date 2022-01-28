@@ -1,0 +1,16 @@
+{
+  "name": "catan",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/ryomiz/catan_dev.git",
+  "author": "Ryosuke Mizuno <ryo.mizuno502@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": ["app/front", "app/server"]
+  },
+  "scripts": {
+    "start:front": "yarn workspace front dev",
+    "start:server": "yarn workspace server start:dev"
+  }
+}
