@@ -1,24 +1,9 @@
-import { gql, useQuery } from '@apollo/client'
 import { Loading } from '@nextui-org/react'
 
-type Game = {
-  name: string
-}
-
-type Games = {
-  games: Game[]
-}
-
-const query = gql`
-  query titles {
-    games {
-      name
-    }
-  }
-`
+import { useTitlesQuery } from './titles.generated'
 
 export const HomeContent = () => {
-  const { data } = useQuery<Games>(query)
+  const { data } = useTitlesQuery()
 
   if (!data) return <Loading />
 
