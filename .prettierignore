@@ -1,0 +1,3 @@
+schema.graphql
+packages/**/build/*
+packages/**/node_modules
