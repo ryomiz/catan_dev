@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  server:
+    build: .
+    ports:
+      - "4000:4000"
+    volumes:
+      - type: bind
+        source: .
+        target: /server
+    command: npm run start:dev
