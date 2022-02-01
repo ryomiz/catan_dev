@@ -10,9 +10,9 @@ export class Game {
   @Field()
   name: string;
 
-  @Field()
-  titleId: number;
+  @Field(() => Title)
+  title: Title;
 
-  @Field((type) => [Number])
-  userIds: number[];
+  @Field(() => [User])
+  users: User[];
 }

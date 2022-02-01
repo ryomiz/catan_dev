@@ -7,14 +7,42 @@ export class GamesService {
     {
       id: 1,
       name: '深夜カタン',
-      titleId: 1,
-      userIds: [1, 2],
+      title: {
+        id: 1,
+        title: 'カタンの開拓者',
+      },
+      users: [
+        {
+          id: 1,
+          name: 'Ryo',
+          role: 'user',
+        },
+        {
+          id: 2,
+          name: 'Suke',
+          role: 'user',
+        },
+      ],
     },
     {
       id: 1,
       name: '早朝カタン',
-      titleId: 2,
-      userIds: [2, 3],
+      title: {
+        id: 2,
+        title: 'カタンの開拓者 騎士編',
+      },
+      users: [
+        {
+          id: 2,
+          name: 'Suke',
+          role: 'user',
+        },
+        {
+          id: 3,
+          name: 'Miz',
+          role: 'user',
+        },
+      ],
     },
   ];
 

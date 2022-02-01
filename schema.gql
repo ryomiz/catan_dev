@@ -5,8 +5,8 @@
 type Game {
   id: ID!
   name: String!
-  titleId: Float!
-  userIds: [Float!]!
+  title: Title!
+  users: [User!]!
 }
 
 type Query {
