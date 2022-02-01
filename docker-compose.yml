@@ -1,5 +1,14 @@
 version: "3.8"
 services:
+  mysql:
+    platform: linux/x86_64
+    image: mysql:8.0.26
+    restart: always
+    ports:
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
   server:
     build:
       dockerfile: .docker/server/Dockerfile
@@ -11,3 +20,6 @@ services:
         source: .
         target: /server
     command: yarn server
+    depends_on:
+      - mysql
+
