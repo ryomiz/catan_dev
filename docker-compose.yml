@@ -3,12 +3,11 @@ services:
   mysql:
     platform: linux/x86_64
     image: mysql:8.0.26
-    restart: always
     ports:
       - '3306:3306'
     environment:
       MYSQL_ROOT_PASSWORD: password
-      MYSQL_DATABASE: root
+      MYSQL_DATABASE: catan
   server:
     build:
       dockerfile: .docker/server/Dockerfile
